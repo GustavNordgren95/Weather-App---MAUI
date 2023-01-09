@@ -14,7 +14,7 @@
 
                         <ViewCell>
                             <StackLayout>
-                            <Label Text="{Binding Key, StringFormat='{0:D}'}" FontSize="Medium" TextColor="Cyan"/>
+                            <Label Text="{Binding Key, StringFormat='{0:D}'}" Padding="10" FontSize="Medium" TextColor="Cyan"/>
                             </StackLayout>
                         </ViewCell>
 
@@ -27,7 +27,6 @@
                                 <Image Source="{Binding Icon}" />
                                 <StackLayout>
                                     <Label Text="{Binding DateTime, StringFormat='{0:HH:00}'}" />
-                              <!--  <Label Text="{Binding .}"/>  -->
                                     <Label Text="{Binding Description}"/>
                                     <Label Text="{Binding Temperature, StringFormat='Temperature : {0} °C'}"/>
                                     <Label Text="{Binding WindSpeed, StringFormat='Windspeed : {0} m/s'}"/>

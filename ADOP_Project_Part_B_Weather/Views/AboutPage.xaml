@@ -9,9 +9,9 @@
             <Label Text="Project Part B" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Weather in Maui" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="This part of the project is about making a simple MAUI Application of the console weather service made in project part A1." 
+        <Label Text="Påbyggnad på den förra uppgiften då vädret skulle presenteras i konsollen, med MAUI har grafiskt gränssnitt lagts till." 
                FontSize="16" Padding="30,0,30,0"/>
-        <Label Text="Select a city and give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Varsågod och välj en stad!" FontSize="16" Padding="30,0,30,0"/>
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
                 <FormattedString>

@@ -6,7 +6,7 @@
         <StackLayout>
             <Button Text="Refresh" Clicked="Button_Clicked" />
 
-            <!-- Your XAML code to present the weather data in a ListView-->
+            <!-- Med binding kommer man åt dom grupperade forecasts som presenteras här nere-->
             
             <ListView x:Name="GroupedForecast" IsGroupingEnabled="true" HasUnevenRows="true">
                 <ListView.GroupHeaderTemplate>
@@ -14,7 +14,8 @@
 
                         <ViewCell>
                             <StackLayout>
-                            <Label Text="{Binding Key, StringFormat='{0:D}'}" Padding="10" FontSize="Medium" TextColor="Cyan"/>
+                            <Label Text="{Binding Key, StringFormat='{0:D}'}" Padding="10" FontSize="Medium" TextColor="Cyan" FontAttributes="Bold" 
+                                  TextDecorations="Underline" />
                             </StackLayout>
                         </ViewCell>
 
@@ -26,10 +27,10 @@
                             <StackLayout Orientation="Horizontal" Padding="10">
                                 <Image Source="{Binding Icon}" />
                                 <StackLayout>
-                                    <Label Text="{Binding DateTime, StringFormat='{0:HH:00}'}" />
+                                    <Label Text="{Binding DateTime, StringFormat='{0:HH:00}'}" FontAttributes="Bold" />
                                     <Label Text="{Binding Description}"/>
-                                    <Label Text="{Binding Temperature, StringFormat='Temperature : {0} °C'}"/>
-                                    <Label Text="{Binding WindSpeed, StringFormat='Windspeed : {0} m/s'}"/>
+                                    <Label Text="{Binding Temperature, StringFormat='Temperatur : {0} °C'}"/>
+                                    <Label Text="{Binding WindSpeed, StringFormat='Vind : {0} m/s'}"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

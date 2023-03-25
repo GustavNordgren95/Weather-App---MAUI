@@ -34,7 +34,7 @@ namespace ADOP_Project_Part_B_Weather.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Title = $"Forecast for {city.Name}";
+            Title = $"Vädret för {city.Name}";
 
             MainThread.BeginInvokeOnMainThread(async () => {await LoadForecast();});
         }
@@ -47,8 +47,7 @@ namespace ADOP_Project_Part_B_Weather.Views
         {
             Forecast forecast = await service.GetForecastAsync(city.Name);
 
-            //Here Group your forecast and bind it to your
-            //ListView ItemSource
+            //Grupperar alla forecasts till varje City efter datum
 
             groupedforecast.City = forecast.City;
             groupedforecast.Items = forecast.Items.GroupBy(fc => fc.DateTime.Date);
